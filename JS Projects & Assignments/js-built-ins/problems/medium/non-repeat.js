@@ -21,7 +21,6 @@
   - `npm run test-nonrepeat`
 */
 function nonrepeat(str) {
-  let count = 0;
   // Your code here
   let nonReapetitive = {};
   for (let ch of str) {
