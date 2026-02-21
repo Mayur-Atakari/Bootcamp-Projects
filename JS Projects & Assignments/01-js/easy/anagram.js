@@ -7,18 +7,12 @@
   - `npm run test-anagram`
 */
 function isAnagram(str1, str2) {
-
-  if (str1.length !== str2.length) {
-      return false;
-  }
-
-
-  function sortString(str) {
-      return str.toLowerCase().split('').sort().join('');
-  }
-
-
-  return sortString(str1) === sortString(str2);
+  const sort = (str) => str.toLowerCase().split("").sort().join("");
+  return sort(str1) === sort(str2);
 }
+
+console.log(isAnagram("earth", "heart"));
+console.log(isAnagram("silent", "listen"));
+console.log(isAnagram("hello", "ji"));
 
 module.exports = isAnagram;

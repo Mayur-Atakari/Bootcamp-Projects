@@ -7,7 +7,7 @@
 /* { Delhi: ["A", "C"], Mumbai: ["B"] } */
 
 function Groups() {
-  [
+  let arr = [
     { name: "A", city: "Delhi" },
     { name: "B", city: "Mumbai" },
     { name: "C", city: "Delhi" },

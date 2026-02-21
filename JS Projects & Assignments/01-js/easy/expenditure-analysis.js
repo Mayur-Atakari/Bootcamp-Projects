@@ -9,7 +9,37 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-    return [];
+  const grouped = transactions.reduce((acc, { category, price }) => {
+    acc[category] = (acc[category] || 0) + price;
+    return acc;
+  }, {});
+
+  return Object.entries(grouped).map(([category, total]) => ({
+    [category]: total,
+  }));
 }
+
+let transactions = [
+  {
+    itemName: "Fuel",
+    category: "Travel",
+    price: 500,
+    timeStamp: 10,
+  },
+  {
+    itemName: "Burger",
+    category: "Food",
+    price: 2000,
+    timeStamp: 12,
+  },
+  {
+    itemName: "Pizza",
+    category: "Food",
+    price: 2000,
+    timeStamp: 12,
+  },
+];
+
+console.log(calculateTotalSpentByCategory(transactions));
 
 module.exports = calculateTotalSpentByCategory;
