@@ -4,7 +4,18 @@
  * the function should return a promise just like before
  */
 
-function sleep(milliseconds) {
+function sleep(seconds) {
+  const start = new Date().getSeconds();
 }
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timer finished");
+}, 1000);
+
+sleep(3000);
+
+console.log("End");
 
 module.exports = sleep;
