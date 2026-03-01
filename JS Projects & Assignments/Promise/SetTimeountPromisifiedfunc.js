@@ -2,8 +2,6 @@ function setTimeOutPromisified(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function callback() {
+setTimeOutPromisified(3000).then(function () {
   console.log("hi there");
-}
-
-setTimeOutPromisified(3000).then(callback);
+});
